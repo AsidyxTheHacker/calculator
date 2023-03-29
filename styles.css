@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-image: linear-gradient(rgb(24, 53, 93), rgb(10, 21, 37));
 }
 
 #container {
@@ -14,10 +15,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(89, 34, 255);
-    padding: 8px;
+    background-color: rgb(83, 33, 235);
+    padding: 7px;
     border: solid rgb(67, 25, 193) 4px;
-    box-shadow: rgb(67, 25, 193) 0 5px 0;
+    box-shadow: rgb(67, 25, 193) 0 5px 0, rgba(0, 0, 0, 0.514) 0 8px 10px;
     border-radius: 8px;
 }
 
@@ -26,21 +27,29 @@ body {
     background-color: rgba(0, 0, 0, 0.789);
     border-radius: 8px;
     width: 21.3em;
-    height: 6.5em;
-    margin-bottom: 8px;
+    height: 7em;
+    margin-bottom: 16px;
 }
 
 button {
-    border: solid black 2px;
+    border: solid rgb(67, 25, 193) 2px;
     border-radius: 12px;
     color: white;
+    cursor: pointer;
+    box-shadow: rgb(61, 23, 173) 0 3px 0;;
     text-shadow: black 1px 1px 0;
-    background-color: rgba(0, 0, 0, 0.401);
+    background-color: rgba(0, 0, 0, 0.326);
     font-size: 20px;
     font-weight: bold;
-    margin: 1.5px;
+    margin: 3px 0 3px 0;
     width: 4em;
     height: 3em;
+    transition: .2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: rgba(0, 0, 0, 0.411);
 }
 
 #equalBtn {
