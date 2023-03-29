@@ -1,7 +1,11 @@
-const button = document.querySelector('button');
+const numKeys = document.querySelectorAll('.num');
+const opKeys = document.querySelectorAll('.op');
+let num1 = 0;
+let num2 = 0;
+let result = 0;
 
 function add(num1, num2) {
-
+    
 }
 
 function subtract(num1, num2) {
