@@ -25,6 +25,9 @@ body {
 }
 
 #display {
+    display: flex;
+    justify-content: end;
+    align-items: end;
     border: solid rgba(89, 34, 255, 0.356) 3px;
     background-color: rgba(0, 0, 0, 0.661);
     box-shadow: inset black 0 -1px -5px;
@@ -32,6 +35,13 @@ body {
     width: 21.3em;
     height: 7.5em;
     margin-bottom: 16px;
+}
+
+.screenOperator {
+    color: rgba(255, 255, 255, 0.845);
+    font-weight: bold;
+    font-size: 48px;
+    margin-right: 8px;
 }
 
 button {
