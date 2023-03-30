@@ -12,3 +12,27 @@ const clear = document.getElementById("clearBtn");
 const allClear = document.getElementById("allClearBtn");
 const screenCurrent = document.getElementById('currentOperator');
 const screenPrevious = document.getElementById('previousOperator');
+
+function appendNum(num) {
+
+}
+
+function operatorSelect(operator) {
+
+}
+
+function compute() {
+
+}
+
+function clear() {
+
+}
+
+function clearAll() {
+    
+}
+
+function appendDisplay() {
+    
+}
