@@ -1,10 +1,3 @@
-class Calculator {
-    constructor(screenCurrent, screenPrevious) {
-        this.screenPrevious = this.screenPrevious;
-        this.screenCurrent = this.screenCurrent;
-    }
-}
-
 const numKeys = document.querySelectorAll('.num');
 const opKeys = document.querySelectorAll('.op');
 const equal = document.getElementById("equalBtn");
@@ -13,26 +6,38 @@ const allClear = document.getElementById("allClearBtn");
 const screenCurrent = document.getElementById('currentOperator');
 const screenPrevious = document.getElementById('previousOperator');
 
-function appendNum(num) {
+const calculator = new Calculator(screenPrevious, screenCurrent)
+
+class Calculator {
+    constructor(screenCurrent, screenPrevious) {
+        this.screenPrevious = this.screenPrevious;
+        this.screenCurrent = this.screenCurrent;
+        this.clear();
+}
+
+appendNum(num) {
 
 }
 
-function operatorSelect(operator) {
+operatorSelect(operator) {
 
 }
 
-function compute() {
+compute() {
 
 }
 
-function clear() {
-
+clear() {
+    this.screenPrevious = '';
+    this.screenCurrent = '';
+    this.operator = undefined;
 }
 
-function clearAll() {
+clearAll() {
     
 }
 
-function appendDisplay() {
-    
+appendDisplay() {
+
+}
 }
