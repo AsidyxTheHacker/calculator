@@ -26,8 +26,9 @@ body {
 
 #display {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: end;
+    flex-direction: column;
     border: solid rgba(89, 34, 255, 0.356) 3px;
     background-color: rgba(0, 0, 0, 0.661);
     box-shadow: inset black 0 -1px -5px;
@@ -35,6 +36,7 @@ body {
     width: 21.3em;
     height: 7.5em;
     margin-bottom: 16px;
+    overflow: hidden;
 }
 
 .screenOperator {
@@ -42,6 +44,12 @@ body {
     font-weight: bold;
     font-size: 48px;
     margin-right: 8px;
+}
+
+#previousOperator {
+    font-size: 20px;
+    margin-top:4px;
+    opacity: .9;
 }
 
 button {

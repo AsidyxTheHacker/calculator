@@ -1,43 +1,50 @@
-const numKeys = document.querySelectorAll('.num');
-const opKeys = document.querySelectorAll('.op');
-const equal = document.getElementById("equalBtn");
-const clear = document.getElementById("clearBtn");
-const allClear = document.getElementById("allClearBtn");
-const screenCurrent = document.getElementById('currentOperator');
-const screenPrevious = document.getElementById('previousOperator');
-
-const calculator = new Calculator(screenPrevious, screenCurrent)
-
 class Calculator {
-    constructor(screenCurrent, screenPrevious) {
-        this.screenPrevious = this.screenPrevious;
-        this.screenCurrent = this.screenCurrent;
-        this.clear();
+    constructor(previousOperatorText, currentOperatorText) {
+        this.previousOperatorText = previousOperatorText
+        this.currentOperatorText = currentOperatorText
+        this.allClear()
+    }
+
+    clear() {
+        
+    };
+
+    allClear() {
+        this.currentOperand = ''
+        this.previousOperand = ''
+        this.operator = undefined
+    };
+
+    appendNumber(number) {
+        this.currentOperand = number;
+    };
+
+    selectOperator(operator) {
+
+    };
+
+    compute() {
+
+    };
+
+    updateDisplay() {
+        this.currentOperatorText.innerText = this.currentOperand;
+    };
 }
 
-appendNum(num) {
+const numButtons = document.querySelectorAll('[data-number]');
+const opButtons = document.querySelectorAll('[data-operator]');
+const equalsButton = document.querySelector('[data-equals]');
+const clearButton = document.querySelector('[data-clear]');
+const allClearButton = document.querySelector('[data-all-clear]');
+const previousOperatorText = document.querySelector('[data-previous-operator]');
+const currentOperatorText = document.querySelector('[data-current-operator]');
 
-}
+const calculator = new Calculator(previousOperatorText, currentOperatorText)
 
-operatorSelect(operator) {
-
-}
-
-compute() {
-
-}
-
-clear() {
-    this.screenPrevious = '';
-    this.screenCurrent = '';
-    this.operator = undefined;
-}
-
-clearAll() {
-    
-}
-
-appendDisplay() {
-
-}
-}
+numButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+});
