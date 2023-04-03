@@ -6,7 +6,7 @@ class Calculator {
     }
 
     clear() {
-        
+        this.currentOperand = this.currentOperand.toString().slice(0, -1)
     };
 
     allClear() {
@@ -59,9 +59,20 @@ class Calculator {
         this.previousOperand = '';
     };
 
+    getDisplayNumber(number) {
+        const stringNumber = number.toString()
+        const integerDigits = parseFloat(stringNumber.split('.'))
+        const floatNumber = parseFloat(number)
+        if (isNaN(floatNumber)) return ''
+        return floatNumber.toLocaleString('en')
+    };
+
     updateDisplay() {
-        this.currentOperatorText.innerText = this.currentOperand;
+        this.currentOperatorText.innerText = this.getDisplayNumber(this.currentOperand);
         this.previousOperatorText.innerText = this.previousOperand;
+        if (this.operator != null) {
+            this.previousOperatorText.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operator}`;
+        }
     };
 }
 
@@ -88,6 +99,16 @@ opButtons.forEach(button => {
         calculator.updateDisplay()
     })
 });
+
+allClearButton.addEventListener('click', () => {
+    calculator.allClear();
+    calculator.updateDisplay();
+})
+
+clearButton.addEventListener('click', () => {
+    calculator.clear();
+    calculator.updateDisplay();
+})
 
 equalsButton.addEventListener('click', () => {
     calculator.compute();
