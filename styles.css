@@ -26,7 +26,7 @@ body {
 
 #display {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: end;
     flex-direction: column;
     border: solid rgba(89, 34, 255, 0.356) 3px;
@@ -48,7 +48,6 @@ body {
 
 #previousOperator {
     font-size: 20px;
-    margin-top:4px;
     opacity: .9;
 }
 
