@@ -81,6 +81,8 @@ class Calculator {
         this.previousOperatorText.innerText = this.previousOperand;
         if (this.operator != null) {
             this.previousOperatorText.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operator}`;
+        } else {
+            this.previousOperatorText.innerText = ''
         }
     };
 }
